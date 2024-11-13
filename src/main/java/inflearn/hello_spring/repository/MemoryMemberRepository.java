@@ -1,9 +1,10 @@
 package inflearn.hello_spring.repository;
 
 import inflearn.hello_spring.domain.Member;
-
+import org.springframework.stereotype.Repository;
 import java.util.*;
 
+@Repository // 컴포넌트 스캔으로 컨테이너에 빈 생성
 public class MemoryMemberRepository implements MemberRepository{
 
     private static Map<Long, Member> store = new HashMap<>(); // 동시성 문제 가능, 다른 방법 있음

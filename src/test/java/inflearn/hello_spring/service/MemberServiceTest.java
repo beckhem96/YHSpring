@@ -67,4 +67,16 @@ class MemberServiceTest {
     @Test
     void findOne() {
     }
+
+    @Test
+    void join() {
+    }
+
+    @Test
+    void testFindMembers() {
+    }
+
+    @Test
+    void testFindOne() {
+    }
 }
