@@ -2,20 +2,15 @@ package inflearn.hello_spring.service;
 
 import inflearn.hello_spring.domain.Member;
 import inflearn.hello_spring.repository.MemberRepository;
-import inflearn.hello_spring.repository.MemoryMemberRepository;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
-@Service // 컴포넌트 스캔으로 빈 객체 생성
 public class MemberService {
     private final MemberRepository memberRepository;
 
     // dependecy injection
-    @Autowired
-    public MemberService(MemoryMemberRepository memoryMemberRepository) {
+    public MemberService(MemberRepository memoryMemberRepository) {
         this.memberRepository = memoryMemberRepository;
     }
 
